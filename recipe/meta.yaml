@@ -23,6 +23,7 @@ build:
   string: h{{ PKG_HASH }}_{{ build_num }}_{{ build_variant }}
   track_features:
     - paraview-egl   # [build_variant == "egl"]
+    - paraview-osmesa   # [build_variant == "osmesa"]
   run_exports:
     - {{ pin_subpackage('paraview', max_pin='x.x') }}
 

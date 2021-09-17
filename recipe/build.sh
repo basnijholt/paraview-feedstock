@@ -11,6 +11,11 @@ if [[ "$build_variant" == "egl" ]]; then
   CMAKE_ARGS="${CMAKE_ARGS} -DEGL_LIBRARY=${BUILD_PREFIX}/${HOST}/sysroot/usr/lib/libEGL.so.1"
   CMAKE_ARGS="${CMAKE_ARGS} -DEGL_opengl_LIBRARY=${BUILD_PREFIX}/${HOST}/sysroot/usr/lib64/libGL.so"
   CMAKE_ARGS="${CMAKE_ARGS} -DOPENGL_opengl_LIBRARY=${BUILD_PREFIX}/${HOST}/sysroot/usr/lib64/libGL.so"
+if [[ "$build_variant" == "osmesa" ]]; then
+  CMAKE_ARGS="-DVTK_USE_X=OFF -DVTK_OPENGL_HAS_OSMESA=ON -DPARAVIEW_USE_QT=OFF"
+  CMAKE_ARGS="${CMAKE_ARGS} -DOSMESA_INCLUDE_DIR=${BUILD_PREFIX}/${HOST}/sysroot/usr/include"
+  CMAKE_ARGS="${CMAKE_ARGS} -DOSMESA_LIBRARY=${BUILD_PREFIX}/${HOST}/sysroot/usr/lib64/libOSMesa.so"
+
 elif [[ "$build_variant" == "qt" ]]; then
   CMAKE_ARGS=""
 fi
