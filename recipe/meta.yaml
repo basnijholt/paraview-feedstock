@@ -81,7 +81,7 @@ requirements:
     - lz4-c
     - expat
     - libnetcdf
-    - glew
+    - glew  # [build_variant == "qt"]
     - double-conversion
     - jsoncpp
     - xz
@@ -90,7 +90,7 @@ requirements:
     - pugixml
     - libtheora
     - gl2ps
-    - qt   # [build_variant == "qt"]
+    - qt  # [build_variant == "qt"]
   run:
     - python
     - numpy
