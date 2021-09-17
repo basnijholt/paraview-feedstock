@@ -28,6 +28,26 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
         SHORT_CONFIG_NAME: linux_64_build_varianteglpython3.9.____cpython
+      linux_64_build_variantosmesapython3.6.____cpython:
+        CONFIG: linux_64_build_variantosmesapython3.6.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        SHORT_CONFIG_NAME: linux_64_build_variantosmesapython3_h877e38f925
+      linux_64_build_variantosmesapython3.7.____cpython:
+        CONFIG: linux_64_build_variantosmesapython3.7.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        SHORT_CONFIG_NAME: linux_64_build_variantosmesapython3_hf5a7e5ae89
+      linux_64_build_variantosmesapython3.8.____cpython:
+        CONFIG: linux_64_build_variantosmesapython3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        SHORT_CONFIG_NAME: linux_64_build_variantosmesapython3_hb787f35560
+      linux_64_build_variantosmesapython3.9.____cpython:
+        CONFIG: linux_64_build_variantosmesapython3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        SHORT_CONFIG_NAME: linux_64_build_variantosmesapython3_h9726117b14
       linux_64_build_variantqtpython3.6.____cpython:
         CONFIG: linux_64_build_variantqtpython3.6.____cpython
         UPLOAD_PACKAGES: 'True'
