@@ -28,6 +28,7 @@ build:
 
 requirements:
   build:
+    - sysroot_linux-64 2.17  # [linux64]
     - cmake
     - pkg-config
     - {{ compiler('c') }}
@@ -39,8 +40,9 @@ requirements:
     - {{ cdt('libxrender-devel') }}      # [linux]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
+    - {{ cdt('mesa-dri-drivers') }}      # [linux and build_variant == "qt"]
     - {{ cdt('mesa-libgbm') }}           # [linux]
+    - {{ cdt('libglvnd-devel') }}        # [linux and build_variant == "egl"]
     - {{ cdt('libxau-devel') }}          # [linux]
     - {{ cdt('alsa-lib-devel') }}        # [linux]
     - {{ cdt('gtk2-devel') }}            # [linux]
@@ -96,6 +98,8 @@ requirements:
     - twisted
 
 test:
+  requires:
+    - {{ cdt('libglvnd-devel') }}  # [linux and build_variant == "egl"]
   imports:
     - paraview
     - paraview.collaboration
